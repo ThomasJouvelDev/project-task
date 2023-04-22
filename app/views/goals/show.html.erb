@@ -1,0 +1,10 @@
+<p style="color: green"><%= notice %></p>
+
+<%= link_to "add task to goals", new_goal_task_path(@goal.id), class: "button__default" %>
+<%= render @goal %>
+
+<div>
+  <%= link_to "Back to goals", goals_path, class: "button__default" %>
+  <%= link_to "Edit this goal", edit_goal_path(@goal), class: "button__primary" %>
+  <%= button_to "Destroy this goal", @goal, method: :delete, class: "button__danger mt-6" %>
+</div>

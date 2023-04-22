@@ -1,0 +1,35 @@
+<h1>New task for <%= @goal.title %></h1>
+<%= form_with url: goal_tasks_path(@goal.id), method: :post do |form| %>
+  <div class="flex flex-col justify-center items-center">
+    <div class="!z-5 relative flex flex-col rounded-[20px] max-w-[300px] md:max-w-[400px] bg-white dark:bg-slate-900 bg-clip-border shadow-3xl shadow-shadow-500 flex flex-col w-full !p-6 3xl:p-![18px] bg-white undefined">
+
+      <div class="relative flex flex-row justify-between">
+        <h4 class="text-xl font-bold text-navy-700 dark:text-white mb-3">
+          <%= @goal.title %>
+        </h4>
+      </div>
+      <% if @goal_task.errors.any? %>
+        <div style="color: red">
+          <h2><%= pluralize(@goal_task.errors.count, "error") %> prohibited this goal task from being saved:</h2>
+
+          <ul>
+            <% @goal_task.errors.each do |error| %>
+              <li><%= error.full_message %></li>
+            <% end %>
+          </ul>
+        </div>
+      <% end %>
+      <div class="mb-3">
+        <%= form.label 'task', class: "form__label" %>
+        <%= form.select :task_id, @tasks, class: "form__input" %>
+      </div>
+      <button class="button__success w-full">
+        <%= form.submit class: 'cursor-pointer' %>
+      </button>
+    </div>
+  </div>
+<% end %>
+
+<div>
+  <%= link_to "Back to goals", goals_path, class: "button__default" %>
+</div>

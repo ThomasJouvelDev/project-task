@@ -1,0 +1,38 @@
+<%= form_with(model: goal) do |form| %>
+  <div class="flex flex-col justify-center items-center">
+    <div class="!z-5 relative flex flex-col rounded-[20px] max-w-[300px] md:max-w-[400px] bg-white dark:bg-slate-900 bg-clip-border shadow-3xl shadow-shadow-500 flex flex-col w-full !p-6 3xl:p-![18px] bg-white undefined">
+
+      <div class="relative flex flex-row justify-between">
+        <h4 class="text-xl font-bold text-navy-700 dark:text-white mb-3">
+          <%= goal.title %>
+        </h4>
+      </div>
+      <% if goal.errors.any? %>
+        <div style="color: red">
+          <h2><%= pluralize(goal.errors.count, "error") %> prohibited this goal from being saved:</h2>
+
+          <ul>
+            <% goal.errors.each do |error| %>
+              <li><%= error.full_message %></li>
+            <% end %>
+          </ul>
+        </div>
+      <% end %>
+      <div class="mb-3">
+        <%= form.label :title, class: "form__label" %>
+        <%= form.text_field :title, class: "form__input" %>
+      </div>
+      <div class="mb-3">
+        <%= form.label :reward, class: "form__label" %>
+        <%= form.text_area :reward, class: "form__input" %>
+      </div>
+      <div class="mb-3">
+        <%= form.label :completion, class: "form__label" %>
+        <%= form.number_field :completion, class: "form__input" %>
+      </div>
+      <button class="button__success w-full">
+        <%= form.submit class: 'cursor-pointer' %>
+      </button>
+    </div>
+  </div>
+<% end %>

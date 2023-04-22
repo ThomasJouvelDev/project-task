@@ -5,34 +5,25 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="708b2a33-fffd-41e7-b8f1-5a341c8c01bd" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/app/assets/stylesheets/components/_button.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/assets/stylesheets/components/_form.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/models/goal.rb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/models/goal_task.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/views/goal_tasks/new.html.erb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/views/goals/_form.html.erb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/views/goals/_goal.html.erb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/views/goals/_goal.json.jbuilder" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/views/goals/edit.html.erb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/views/goals/index.html.erb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/views/goals/index.json.jbuilder" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/views/goals/new.html.erb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/views/goals/show.html.erb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/views/goals/show.json.jbuilder" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/Dockerfile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Gemfile" beforeDir="false" afterPath="$PROJECT_DIR$/Gemfile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Gemfile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/Gemfile.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/assets/config/manifest.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/assets/config/manifest.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/assets/stylesheets/application.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/controllers/dashboard_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/dashboard_controller.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/controllers/tasks_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/tasks_controller.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/models/goal.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/goal.rb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/models/task.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/task.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/layouts/application.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/layouts/application.html.erb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/dashboard/index.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/dashboard/index.html.erb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/views/tasks/_form.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/tasks/_form.html.erb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/views/tasks/_task.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/tasks/_task.html.erb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/tasks/edit.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/tasks/edit.html.erb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/tasks/index.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/tasks/index.html.erb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/tasks/new.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/tasks/new.html.erb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/tasks/show.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/tasks/show.html.erb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/database.yml" beforeDir="false" afterPath="$PROJECT_DIR$/config/database.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db/development.sqlite3" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/db/migrate/20230120145813_create_tasks.rb" beforeDir="false" afterPath="$PROJECT_DIR$/db/migrate/20230120145813_create_tasks.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db/schema.rb" beforeDir="false" afterPath="$PROJECT_DIR$/db/schema.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/entrypoint.sh" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/project-task.iml" beforeDir="false" afterPath="$PROJECT_DIR$/project-task.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/fixtures/tasks.yml" beforeDir="false" afterPath="$PROJECT_DIR$/test/fixtures/tasks.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/models/task_test.rb" beforeDir="false" afterPath="$PROJECT_DIR$/test/models/task_test.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/routes.rb" beforeDir="false" afterPath="$PROJECT_DIR$/config/routes.rb" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -51,22 +42,28 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;ruby.rails.projectView.checked&quot;: &quot;true&quot;,
-    &quot;ruby.structure.view.model.defaults.configured&quot;: &quot;true&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_ADD_EXTERNAL_FILES": "true",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "last_opened_file_path": "/Users/thomas/Dev/ThomasJouvelDev/project-task/app/views",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "ruby.rails.projectView.checked": "true",
+    "ruby.structure.view.model.defaults.configured": "true",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/app/views" />
+    </key>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="SpringUtil" SPRING_PRE_LOADER_OPTION="true" RAKE_SPRING_PRE_LOADER_OPTION="true" RAILS_SPRING_PRE_LOADER_OPTION="true" />
   <component name="TaskManager">
@@ -79,7 +76,7 @@
       <workItem from="1674225771328" duration="3662000" />
       <workItem from="1679052201861" duration="6624000" />
       <workItem from="1682160009723" duration="5031000" />
-      <workItem from="1682165192257" duration="7680000" />
+      <workItem from="1682165192257" duration="14497000" />
     </task>
     <servers />
   </component>
