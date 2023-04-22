@@ -1,0 +1,42 @@
+.form__label {
+  @apply text-sm text-blue-950 dark:text-white font-bold;
+}
+
+.form__input {
+  @apply mt-2 flex h-12 w-full items-center justify-center rounded-xl border bg-white/0 p-3 text-sm outline-none border-gray-200 dark:!text-white
+}
+
+input[type="datetime-local"]::-webkit-calendar-picker-indicator {
+  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="15" viewBox="0 0 24 24"><path fill="%23bbbbbb" d="M20 3h-1V1h-2v2H7V1H5v2H4c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm0 18H4V8h16v13z"/></svg>');
+  opacity: 1;
+  display: block;
+  background-repeat: no-repeat;
+  width: 25px;
+  height: 25px;
+  border-width: thin
+}
+
+
+.form__input--success {
+  @apply mt-2 flex h-12 w-full items-center justify-center rounded-xl border bg-white/0 p-3 text-sm outline-none border-green-500 text-green-500 placeholder:text-green-500 dark:!border-green-400 dark:!text-green-400 dark:placeholder:!text-green-400
+}
+
+.form__input--error {
+  @apply mt-2 flex h-12 w-full items-center justify-center rounded-xl border bg-white/0 p-3 text-sm outline-none border-red-500 text-red-500 placeholder:text-red-500 dark:!border-red-400 dark:!text-red-400 dark:placeholder:!text-red-400
+}
+
+.form__input--disabled {
+  @apply mt-2 flex h-12 w-full items-center justify-center rounded-xl border bg-white/0 p-3 text-sm outline-none !border-none !bg-gray-100 cursor-not-allowed dark:!bg-white/5
+}
+
+.form__checkbox-label {
+  @apply text-blue-950 dark:text-white flex flex-col justify-center px-2 select-none cursor-pointer
+}
+
+.form__checkbox {
+  @apply appearance-none h-6 w-6 bg-gray-400 rounded-full checked:scale-150 checked:opacity-0 transition-all duration-300 cursor-pointer
+}
+
+.form__checkbox-styler {
+  @apply h-6 w-6 absolute rounded-full transition-all duration-300 pointer-events-none
+}
