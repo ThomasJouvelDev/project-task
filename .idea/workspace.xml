@@ -5,21 +5,27 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="708b2a33-fffd-41e7-b8f1-5a341c8c01bd" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/views/goals/_button.html.erb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/views/recurring_tasks/_form.html.erb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/views/recurring_tasks/_task.html.erb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/views/recurring_tasks/_task.json.jbuilder" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/views/recurring_tasks/edit.html.erb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/views/recurring_tasks/index.html.erb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/views/recurring_tasks/index.json.jbuilder" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/views/recurring_tasks/new.html.erb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/views/recurring_tasks/show.html.erb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/views/recurring_tasks/show.json.jbuilder" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/controllers/goals_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/goals_controller.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/models/goal.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/goal.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Gemfile" beforeDir="false" afterPath="$PROJECT_DIR$/Gemfile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Gemfile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/Gemfile.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/assets/stylesheets/components/_button.css" beforeDir="false" afterPath="$PROJECT_DIR$/app/assets/stylesheets/components/_button.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/controllers/dashboard_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/dashboard_controller.rb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/models/task.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/task.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/goals/_form.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/goals/_form.html.erb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/dashboard/index.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/dashboard/index.html.erb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/views/goals/_goal.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/goals/_goal.html.erb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/layouts/application.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/layouts/application.html.erb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db/migrate/20230120145813_create_tasks.rb" beforeDir="false" afterPath="$PROJECT_DIR$/db/migrate/20230120145813_create_tasks.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db/migrate/20230422105155_create_goals.rb" beforeDir="false" afterPath="$PROJECT_DIR$/db/migrate/20230422105155_create_goals.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/routes.rb" beforeDir="false" afterPath="$PROJECT_DIR$/config/routes.rb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/db/schema.rb" beforeDir="false" afterPath="$PROJECT_DIR$/db/schema.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db/seeds.rb" beforeDir="false" afterPath="$PROJECT_DIR$/db/seeds.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tailwind.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/tailwind.config.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/fixtures/tasks.yml" beforeDir="false" afterPath="$PROJECT_DIR$/test/fixtures/tasks.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/models/task_test.rb" beforeDir="false" afterPath="$PROJECT_DIR$/test/models/task_test.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project-task.iml" beforeDir="false" afterPath="$PROJECT_DIR$/project-task.iml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -79,7 +85,7 @@
       <workItem from="1679052201861" duration="6624000" />
       <workItem from="1682160009723" duration="5031000" />
       <workItem from="1682165192257" duration="14558000" />
-      <workItem from="1682862846615" duration="5608000" />
+      <workItem from="1682862846615" duration="13155000" />
     </task>
     <servers />
   </component>

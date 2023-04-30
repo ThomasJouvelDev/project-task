@@ -1,0 +1,9 @@
+<p style="color: green"><%= notice %></p>
+
+<%= render @recurring_task %>
+
+<div>
+  <%= link_to "Back to recurring_tasks", recurring_tasks_path, class: "button__default" %>
+  <%= link_to "Edit this recurring_task", edit_recurring_task_path(@recurring_task), class: "button__primary" %>
+  <%= button_to "Destroy this recurring_task", @recurring_task, method: :delete, class: "button__danger mt-6" %>
+</div>

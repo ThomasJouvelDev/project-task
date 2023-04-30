@@ -11,6 +11,6 @@
 #  updated_at :datetime         not null
 #
 class Task < ApplicationRecord
-  has_many :goal_task
+  has_many :goal_task, dependent: :destroy
   has_many :goals, through: :goal_task
 end

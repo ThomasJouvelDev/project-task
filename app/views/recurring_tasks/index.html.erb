@@ -1,0 +1,12 @@
+<p style="color: green"><%= notice %></p>
+
+<h1>Recurring Tasks</h1>
+
+<div id="recurring_task">
+  <% @recurring_tasks.each do |task| %>
+    <%= render task %>
+  <% end %>
+</div>
+
+<%= link_to "Dashboard", root_path, class: 'button__default' %>
+<%= link_to "New Recurring task", new_recurring_task_path, class: 'button__primary' %>

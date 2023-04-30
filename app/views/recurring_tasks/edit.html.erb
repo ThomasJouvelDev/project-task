@@ -1,0 +1,9 @@
+<div>
+  <%= link_to "Show this recurring_task", @recurring_task, class: "button__primary" %> |
+  <%= link_to "Back to recurring_tasks", recurring_tasks_path, class: "button__default" %>
+</div>
+
+<%= render "form", recurring_task: @recurring_task %>
+
+<br>
+

@@ -1,0 +1,12 @@
+<%= button_to url, method: method, class: class_names(
+  "text-white text-sm border border-white font-medium px-4 py-2 inline-flex space-x-1 items-center",
+  classes,
+  'hover:text-poor': goal.classification == Goal::CLASSIFICATION_POOR,
+  'hover:text-common': goal.classification == Goal::CLASSIFICATION_COMMON,
+  'hover:text-uncommon': goal.classification == Goal::CLASSIFICATION_UNCOMMON,
+  'hover:text-rare': goal.classification == Goal::CLASSIFICATION_RARE,
+  'hover:text-epic': goal.classification == Goal::CLASSIFICATION_EPIC,
+  'hover:text-legendary': goal.classification == Goal::CLASSIFICATION_LEGENDARY,
+) do %>
+  <%= yield %>
+<% end %>
