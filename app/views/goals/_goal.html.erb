@@ -1,7 +1,7 @@
-<div class="h-50 w-[500px] rounded-lg bg-white border border-slate-700 m-6 ml-0"  id="<%= dom_id goal %>">
+<div class="h-50 w-[500px] rounded-lg bg-slate-900 border border-white m-6 ml-0"  id="<%= dom_id goal %>">
   <!-- Header -->
   <div class="flex items-center justify-between border-b">
-    <div class="p-3 text-gray-700 text-lg font-bold"><%= goal.title %></div>
+    <div class="p-3 text-white text-lg font-semibold"><%= goal.title %></div>
     <div class="p-3 flex">
       <%= button_to edit_goal_path(goal), method: :get, class: "text-slate-800 hover:text-blue-600 text-sm bg-white hover:bg-slate-100 border border-slate-200 rounded-l-lg font-medium px-4 py-2 inline-flex space-x-1 items-center" do %>
         <span>
@@ -24,11 +24,35 @@
       <% end %>
     </div>
   </div>
-  <div class="p-3 text-lg text-gray-600 flex items-center justify-between peer-checked:bg-green-300">
+  <div class="<%= class_names(
+                    'p-3 text-lg flex items-center justify-between font-bold italic',
+                    'text-poor': goal.classification == Goal::CLASSIFICATION_POOR,
+                    'text-common': goal.classification == Goal::CLASSIFICATION_COMMON,
+                    'text-uncommon': goal.classification == Goal::CLASSIFICATION_UNCOMMON,
+                    'text-rare': goal.classification == Goal::CLASSIFICATION_RARE,
+                    'text-epic': goal.classification == Goal::CLASSIFICATION_EPIC,
+                    'text-legendary': goal.classification == Goal::CLASSIFICATION_LEGENDARY,
+                  ) %>">
     <%= goal.reward %>
   </div>
-    <div class="p-1 border-t text-lg text-gray-600 text-center relative">
-      <span class="relative z-20"><%= goal.real_completion %> %</span>
-      <div class="rounded-b-lg absolute inset-0 bg-green-300" style="width: <%= goal.real_completion %>%"></div>
+    <div class="<%= class_names(
+                     'p-1 border-t text-lg text-white text-center relative font-semibold',
+                     'text-slate-900': [Goal::CLASSIFICATION_COMMON, Goal::CLASSIFICATION_POOR].include?(goal.classification) && goal.real_completion > 50
+                   ) %>">
+      <span class="relative z-20">
+        <%= goal.real_completion %> %
+      </span>
+      <div class="<%= class_names(
+                        'rounded-bl-lg absolute inset-0',
+                        'rounded-br-lg': goal.real_completion >= 100,
+                        'bg-poor': goal.classification == Goal::CLASSIFICATION_POOR,
+                        'bg-common': goal.classification == Goal::CLASSIFICATION_COMMON,
+                        'bg-uncommon': goal.classification == Goal::CLASSIFICATION_UNCOMMON,
+                        'bg-rare': goal.classification == Goal::CLASSIFICATION_RARE,
+                        'bg-epic': goal.classification == Goal::CLASSIFICATION_EPIC,
+                        'bg-legendary': goal.classification == Goal::CLASSIFICATION_LEGENDARY,
+                      ) %>"
+           style="width:<%= goal.real_completion %>%">
+      </div>
     </div>
 </div>

@@ -4,9 +4,9 @@
 #
 #  id         :uuid             not null, primary key
 #  content    :text
-#  done       :boolean
+#  done       :boolean          default(FALSE), not null
 #  due_date   :datetime
-#  name       :string
+#  name       :string           not null
 #  created_at :datetime         not null
 #  updated_at :datetime         not null
 #

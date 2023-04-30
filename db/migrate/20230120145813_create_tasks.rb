@@ -1,10 +1,10 @@
 class CreateTasks < ActiveRecord::Migration[7.0]
   def change
     create_table :tasks, id: :uuid do |t|
-      t.string :name
-      t.text :content
-      t.boolean :done
-      t.datetime :due_date
+      t.string :name, null: false
+      t.text :content, null: true
+      t.boolean :done, default: false, null: false
+      t.datetime :due_date, null: true
 
       t.timestamps
     end

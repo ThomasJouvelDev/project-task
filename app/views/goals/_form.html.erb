@@ -30,6 +30,10 @@
         <%= form.label :completion, class: "form__label" %>
         <%= form.number_field :completion, class: "form__input" %>
       </div>
+      <div class="mb-3">
+        <%= form.label :classification, class: "form__label" %>
+        <%= form.select :classification, Goal::GOALS_CLASSIFICATIONS, class: "form__input" %>
+      </div>
       <button class="button__success w-full">
         <%= form.submit class: 'cursor-pointer' %>
       </button>
