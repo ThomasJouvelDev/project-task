@@ -1,4 +1,7 @@
-<div class="h-50 w-[500px] rounded-lg border border-white m-6 ml-0 text-white"  id="<%= dom_id task %>">
+<div class="<%= class_names('h-50 w-[500px] rounded-lg m-6 ml-0 text-white relative', 'border border-white': !task.done) %>"  id="<%= dom_id task %>">
+  <% if task.done %>
+    <div class="border border-white w-[540px] h-full relative top-[27px] left-[-20px]"></div>
+  <% end %>
   <!-- Header -->
   <div class="p-3 text-lg flex items-center justify-between peer-checked:bg-green-300">
     <div class="inline-flex items-center space-x-2">
@@ -10,10 +13,12 @@
         <%= inline_svg_tag "icons/delete.svg", class: 'w-4 h-4' %>
       <% end %>
     </div>
-    <%= form_with(model: task, id: task.id) do |form| %>
-      <div class="flex flex-row ">
-        <%= form.check_box :done, class: "form__checkbox peer", :onclick => "javascript: document.getElementById('#{task.id}').submit();" %>
-        <div class='form__checkbox-styler peer-checked:bg-green-300'></div>
+    <%= form_with(url: task_path(task.id), method: :patch, id: "form-#{task.id}" ) do |form| %>
+      <div class="flex flex-row checkbox__container relative">
+        <%= form.check_box :done, id: task.id,  class: "checkbox", checked: task.done, :onclick => "javascript: document.getElementById('form-#{task.id}').submit();" %>
+        <%= form.label task.id do %>
+          <div class="tick-mark"></div>
+        <% end %>
       </div>
     <% end %>
   </div>
