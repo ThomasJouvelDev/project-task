@@ -2,7 +2,7 @@
 #
 # Table name: recurring_tasks
 #
-#  id         :bigint           not null, primary key
+#  id         :uuid             not null, primary key
 #  content    :text
 #  name       :string           not null
 #  recurrence :string           default("daily"), not null
@@ -12,6 +12,7 @@
 #
 class RecurringTask < ApplicationRecord
   belongs_to :goal, optional: true
+  has_many :tasks, dependent: :destroy
 
   RECURRENCE_TYPE = [
     RECURRENCE_TYPE_DAILY = 'daily',

@@ -2,7 +2,7 @@
 #
 # Table name: recurring_tasks
 #
-#  id         :bigint           not null, primary key
+#  id         :uuid             not null, primary key
 #  content    :text
 #  name       :string           not null
 #  recurrence :string           default("daily"), not null

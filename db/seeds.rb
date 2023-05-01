@@ -8,6 +8,7 @@
 
 Task.destroy_all
 Goal.destroy_all
+RecurringTask.destroy_all
 
 Goal.create!(
   [
@@ -50,18 +51,18 @@ Goal.create!(
   ]
 )
 
-goal_with_task = Goal.create!(title: "Goal with tasks", reward: 'A reward', classification:  Goal::CLASSIFICATION_EPIC)
+goal_with_task = Goal.create!(title: "Goal with tasks", reward: 'A reward', classification: Goal::CLASSIFICATION_EPIC)
 tasks = Task.create!(
   [
     {
       name: "Première",
       content: "La première tâche de l'objectif",
-      due_date: 3.days.from_now
+      due_date: 2.days.ago
     },
     {
       name: "Deuxième",
       content: "La deuxième tâche de l'objectif",
-      due_date: 4.days.from_now
+      due_date: Time.zone.today
     },
     {
       name: "Troisième",
@@ -74,3 +75,8 @@ tasks = Task.create!(
 tasks.each do |task|
   GoalTask.create!(task:, goal: goal_with_task)
 end
+
+RecurringTask.create!(name: "Tâche récurrente daily", content: "à faire tous les jours", recurrence: 'daily', goal: goal_with_task)
+RecurringTask.create!(name: "Tâche récurrente weekly", content: "à faire toutes les semaines", recurrence: 'weekly', goal: goal_with_task)
+RecurringTask.create!(name: "Tâche récurrente monthly", content: "à faire tous les mois", recurrence: 'monthly', goal: goal_with_task)
+

@@ -32,7 +32,7 @@ ActiveRecord::Schema[7.0].define(version: 2023_04_30_173341) do
     t.datetime "updated_at", null: false
   end
 
-  create_table "recurring_tasks", force: :cascade do |t|
+  create_table "recurring_tasks", id: :uuid, default: -> { "gen_random_uuid()" }, force: :cascade do |t|
     t.string "name", null: false
     t.string "recurrence", default: "daily", null: false
     t.text "content"
@@ -42,6 +42,7 @@ ActiveRecord::Schema[7.0].define(version: 2023_04_30_173341) do
   end
 
   create_table "tasks", id: :uuid, default: -> { "gen_random_uuid()" }, force: :cascade do |t|
+    t.uuid "recurring_task_id"
     t.string "name", null: false
     t.text "content"
     t.boolean "done", default: false, null: false

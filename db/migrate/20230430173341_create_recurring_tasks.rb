@@ -1,6 +1,6 @@
 class CreateRecurringTasks < ActiveRecord::Migration[7.0]
   def change
-    create_table :recurring_tasks do |t|
+    create_table :recurring_tasks, id: :uuid do |t|
       t.string :name, null: false
       t.string :recurrence, null: false, default: RecurringTask::RECURRENCE_TYPE_DAILY
       t.text :content, null: true

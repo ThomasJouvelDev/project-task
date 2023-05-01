@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get "/generate_recurring_task", to: "dashboard#generate_recurring_tasks_tasks"
+
   resources :tasks
   resources :recurring_tasks
   resources :goals do
